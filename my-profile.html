@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>eMercado - Todo lo que busques está aquí</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link" href="cover.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <input class="btn btn-secondary dropdown-toggle" type="button" id="userEmail" data-bs-toggle="dropdown" aria-expanded="false" style="background-color:#212529;border-color: #212529;">
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="cart.html"">Mi Carrito</a></li>
+                <li><a class="dropdown-item" href="my-profile.html"">Mi perfil</a></li>
+                <li><a class="dropdown-item" href="index.html" onclick="signOut();">Cerrar Sesion</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="container">
+      <div class="d-flex">
+        <div style="width: 80%;margin-top: 60px;">
+          <h2>Perfil</h2>
+        </div>
+        <div style="width: 120px;height: 120px;border: 1px solid black;margin-top: 20px; ">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" id="imgPerfil" style="width: 118px;height:118px;">
+        </div>
+      </div>
+      <div style="width: 1100px;">
+        <hr>
+        <form action="#" novalidate class="needs-validation">
+        <div class="row">
+          <div class="col-md-5 p-2">
+            Primer nombre<em style="color:black">*</em>
+            <input type="text" class="form-control" required id="nombrePerfil1">
+          </div>
+          &emsp;&emsp;&emsp;&emsp;&emsp;
+
+          <div class="col-md-5 p-2">
+            Segundo nombre
+            <input type="text" class="form-control" id="nombrePerfil2">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5 p-2">
+            Primer apellido<em style="color:black">*</em>
+            <input type="text" class="form-control" required id="apellidoPerfil1">
+          </div>
+          &emsp;&emsp;&emsp;&emsp;&emsp;
+
+          <div class="col-md-5 p-2">
+            Segundo apellido
+            <input type="text" class="form-control" id="apellidoPerfil2">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5 p-2">
+            E-mail
+            <input type="text" class="form-control" id="emailPerfil">
+          </div>
+          &emsp;&emsp;&emsp;&emsp;&emsp;
+
+          <div class="col-md-5 p-2">
+            Imagen de perfil
+            <input class="form-control" type="file" id="formFile">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5 p-2">
+            Telefono de contacto<em style="color:black">*</em>
+            <input type="text" class="form-control" maxlength="9" required id="numTelefonoPerfil">
+          </div>
+        </div>
+        <hr>
+        <button class="btn btn-primary btn-lg" id="guardarPerfil">Guardar cambios</button>
+      </div>
+    </div>
+  </form>
+  </main>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
+        2022</p>
+      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+    </div>
+  </footer>
+  <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+  <script src="js/index.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/my-profile.js"></script>
+  <script>
+    // BUILT-IN Bootstrap script requerido para el formulario
+
+    (function () {
+      "use strict";
+
+      // Seleccion de todos los forms que queremos aplicar validacion custom de bootstrap
+      var forms = document.querySelectorAll(".needs-validation");
+
+      // Loop entre ellos, validacion si esta todo correcto o no acompañado de las alertas de error o exito.
+      Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener(
+          "submit",
+          function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+              
+
+            } else {
+              
+              
+            }
+
+            form.classList.add("was-validated");
+          },
+          false
+        );
+      });
+    })();
+  </script>
+</body>
+
+</html>

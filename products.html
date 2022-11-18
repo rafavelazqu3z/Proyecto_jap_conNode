@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>eMercado - Todo lo que busques está aquí</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link" href="cover.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <input class="btn btn-secondary dropdown-toggle" type="button" id="userEmail" data-bs-toggle="dropdown" aria-expanded="false" style="background-color:#212529;border-color: #212529;">
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="cart.html"">Mi Carrito</a></li>
+                <li><a class="dropdown-item" href="my-profile.html"">Mi perfil</a></li>
+                <li><a class="dropdown-item" href="index.html" onclick="signOut();">Cerrar Sesion</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <center>
+    <h1>Productos</h1>
+    <p id="descripcion_cat"></p>
+  </center>
+  
+  <main class="container">
+    <div class="row">
+      <div class="col text-end">
+        <div class="btn-group btn-group-toggle mb-4" style="margin-right: 10px !important;" data-bs-toggle="buttons">
+          <input type="radio" class="btn-check" name="options" id="sortAsc" onclick="productSortLess()">
+          <label class="btn btn-light" for="sortAsc"><img src="./img/dollarsingup.png" width="20px"></label>
+          <input type="radio" class="btn-check" name="options" id="sortDesc" onclick="productSortMore()">
+          <label class="btn btn-light" for="sortDesc"><img src="./img/dollarsingdown.png" width="20px"></label>
+          <input type="radio" class="btn-check" name="options" id="sortByCount" checked onclick="productSortRel()">
+          <label class="btn btn-light" for="sortByCount"><i class="fas fa-sort-amount-down mr-1"></i></label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-14 ">
+        
+        <div class="row container p-0 m-0">
+          
+          <div class="col">
+            <p class="font-weight-normal text-end my-2">Precio.</p>
+          </div>
+          <div class="col-2 mb-1 ">
+            <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
+          </div>
+          <div class="col mb-1">
+            <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
+          </div>
+          <div class="col-6">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Busca un Producto" aria-label="Recipient's username" aria-describedby="basic-addon2" id="busqueda">
+              <span class="input-group-text" id="basic-addon2"><i class="fas fa-search"></i></span>
+              <button class="btn btn-link btn-sm" id="clearRangeFilter" onclick="productsClean()">Limpiar</button>
+            </div>
+          </div>
+          <div class="col-3 p-0">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container" id="listado_auto">
+      
+    </div>
+  </main>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
+        2022</p>
+      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+    </div>
+  </footer>
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+  <script src="js/index.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/products.js"></script>
+</body>
+
+</html>

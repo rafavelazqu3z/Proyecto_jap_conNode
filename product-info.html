@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>eMercado - Todo lo que busques está aquí</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link" href="cover.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <input class="btn btn-secondary dropdown-toggle" type="button" id="userEmail" data-bs-toggle="dropdown" aria-expanded="false" style="background-color:#212529;border-color: #212529;">
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="cart.html"">Mi Carrito</a></li>
+                <li><a class="dropdown-item" href="my-profile.html"">Mi perfil</a></li>
+                <li><a class="dropdown-item" href="index.html" onclick="signOut();">Cerrar Sesion</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="container" id="contenedorProductos">
+      
+      <br>
+      <div class="container d-flex">
+        <div style="width: 80%;">
+          <h1 id="productName"> </h1>
+        </div>
+      <div style="width: 20%;">
+        <button type="button" id="btnCompra" class="btn btn-success" >Comprar</button>
+      </div>
+      
+    </div>
+      <hr>
+      <h5><b>Precio</b></h5>
+      <p id="productCost"></p>
+      <h5><b>Descripcion</b></h5>
+      <p id="productDesc"></p>
+      <h5><b>Categoria</b></h5>
+      <p id="productCat"></p>
+      <h5><b>Cantidad de vendidos</b></h5>
+      <p id="productCount"></p>
+      <h5><b>Imagenes Ilustrativas</b></h5>
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="width: 700px;">
+        <div class="carousel-inner" id="imagenesIlus">
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <br><br>
+      <h4>Comentarios</h4>
+      <div id="seccionComentarios">
+
+      </div>
+      <br>
+      <div id="seccionComentar">
+        <h4>Comentar</h4>
+        <p>Tu opinion:</p>
+        <textarea cols="40" rows="3" id="opinion"></textarea>
+        <p>Tu puntuacion:</p>
+        <input type="text" placeholder="Ingresar puntuacion" name="estrellas" list="estrellas" id="puntuacion">
+        <datalist id="estrellas">
+          <option value="1" label="1"></option>
+          <option value="2" label="2"></option>
+          <option value="3" label="3"></option>
+          <option value="4" label="4"></option>
+          <option value="5" label="5"></option>
+        </datalist>
+        <br> <br>
+        <input class="btn btn-primary" type="submit" id="btnComentar">
+      </div>
+      <br>
+      <hr>
+      <div class="prodRelated">
+        <h3>Productos Relacionados</h3>
+        <div  id="productos_rel">
+          
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
+        2022</p>
+      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+    </div>
+  </footer>
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/product-info.js"></script>
+</body>
+
+</html>
