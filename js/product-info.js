@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function(e){
         if (resultObj.status === "ok")
         {
             productInfo = resultObj.data
+           
         }
     });
     getJSONData(PRODUCTS_URL).then(function(resultObj){

@@ -1,9 +1,9 @@
-const CATEGORIES_URL = "https://japceibal.github.io/emercado-api/cats/cat.json";
-const PUBLISH_PRODUCT_URL = "https://japceibal.github.io/emercado-api/sell/publish.json";
-const PRODUCTS_URL = "https://japceibal.github.io/emercado-api/cats_products/"+localStorage.getItem('catID')+".json";
-const PRODUCT_INFO_URL = "https://japceibal.github.io/emercado-api/products/"+localStorage.getItem('prodID')+".json";
-const PRODUCT_INFO_COMMENTS_URL = "https://japceibal.github.io/emercado-api/products_comments/"+localStorage.getItem('prodID')+".json";
-const CART_INFO_URL = "https://japceibal.github.io/emercado-api/user_cart/25801.json";
+const CATEGORIES_URL = "http://localhost/categories";
+const PUBLISH_PRODUCT_URL = "http://localhost/sell";
+const PRODUCTS_URL = "http://localhost/cats_products/"+localStorage.getItem('catID');
+const PRODUCT_INFO_URL = "http://localhost/products/"+localStorage.getItem('prodID')+".json";
+const PRODUCT_INFO_COMMENTS_URL = "http://localhost/products_comments/"+localStorage.getItem('prodID')+".json";
+const CART_INFO_URL = "http://localhost/carrito";
 const CART_BUY_URL = "https://japceibal.github.io/emercado-api/cart/buy.json";
 const EXT_TYPE = ".json";
 
